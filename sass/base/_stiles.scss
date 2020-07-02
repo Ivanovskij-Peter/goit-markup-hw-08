@@ -12,6 +12,10 @@ img {
   display: block;
   height: auto;
 }
+svg {
+  max-width: 100%;
+  height: auto;
+}
 
 $primary-text-color: #212121;
 $title-text-color: #757575;
@@ -37,10 +41,20 @@ ul {
   padding: 0;
   margin: 0;
 }
-// .section {
-//   padding-top: 94px;
-//   padding-bottom: 94px;
-// }
+.section {
+  @media screen and (min-width: 480px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @media screen and(min-width:1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 .button {
   display: block;
   margin-left: auto;
