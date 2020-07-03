@@ -2,14 +2,14 @@ a {
   text-decoration: none;
 }
 
-.buttons {
-  margin-bottom: 34px;
-  display: flex;
-  justify-content: center;
-  & .item:not(:last-child) {
-    margin-right: 8px;
-  }
-}
+// .buttons {
+//   margin-bottom: 34px;
+//   display: flex;
+//   justify-content: center;
+//   & .item:not(:last-child) {
+//     margin-right: 8px;
+//   }
+// }
 
 .buttons .link {
   padding: 6px 22px;
@@ -32,12 +32,12 @@ a {
 }
 
 /* works */
-.works {
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  margin: -15px;
-}
+// .works {
+//   display: flex;
+//   flex-wrap: wrap;
+//   text-align: center;
+//   margin: -15px;
+// }
 .example {
   display: block;
 
