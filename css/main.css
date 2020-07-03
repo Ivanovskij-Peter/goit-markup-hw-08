@@ -13,6 +13,7 @@ html {
 img {
   display: block;
   height: auto;
+  width: 100%;
 }
 
 svg {
@@ -124,6 +125,8 @@ ul {
 }
 
 .logo {
+  padding-top: 16px;
+  padding-bottom: 16px;
   color: #212121;
   font-family: Raleway;
   font-weight: 700;
@@ -659,12 +662,22 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   margin-right: 10px;
-  width: 44px;
+  width: calc((100% - 8 * 10px) / 4);
   height: 44px;
 }
 
 .team-links:nth-child(4) {
   margin-right: 0;
+}
+
+@media screen and (max-width: 1199px) {
+  .team-links {
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .team-info {
@@ -793,11 +806,29 @@ textarea {
 }
 
 .footer-nav {
-  padding-top: 48px;
-  padding-bottom: 48px;
+  margin: 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
 }
 
 .adress-main {
+  margin-bottom: 8px;
   color: #ffffff;
   font-style: normal;
   font-weight: 400;
@@ -818,7 +849,14 @@ textarea {
   color: #2196f3;
 }
 
+.footer-mail {
+  margin-bottom: 8px;
+}
+
 .footer-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: #ffffff;
   font-family: Raleway;
   font-style: normal;
@@ -828,17 +866,47 @@ textarea {
   text-decoration: none;
 }
 
+@media screen and (max-width: 767px) {
+  .footer-logo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+}
+
 .second-logo {
   color: #ffffff;
 }
 
 .footer-connect {
+  margin-bottom: 20px;
   display: block;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.2;
   color: #ffffff;
+}
+
+.footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-links .link {
+  margin-right: 10px;
+  margin-bottom: 60px;
+}
+
+.footer-links .link:nth-child(4) {
+  margin-right: 0;
 }
 
 .social-footer {
@@ -855,9 +923,10 @@ textarea {
 }
 
 .footer-input {
-  width: 358px;
+  width: calc(100% - 30px);
   height: 50px;
   margin-right: 10px;
+  margin-bottom: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
@@ -869,6 +938,34 @@ textarea {
   border-radius: 4px;
   background-color: #2f303a;
   color: #ffffff;
+}
+
+.button.primary {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-send {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-news {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.footer-adress {
+  margin-bottom: 60px;
 }
 
 a {
