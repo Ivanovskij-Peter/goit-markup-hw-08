@@ -13,6 +13,16 @@
     align-items: center;
     text-align: center;
   }
+  @media screen and(min-width:768px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+  }
+  @media screen and(min-width:1200px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .adress-main {
@@ -40,21 +50,14 @@
 }
 
 .footer-logo {
-  display: flex;
-
+  display: block;
+  margin-bottom: 20px;
   color: $second-text-color;
   font-family: Raleway;
-  font-style: normal;
   font-weight: 700;
   font-size: 22px;
   line-height: 1.2;
   text-decoration: none;
-  @media screen and(max-width:767px) {
-    justify-content: center;
-  }
-  @media screen and(max-width:1199px) {
-    margin-bottom: 20px;
-  }
 }
 .second-logo {
   color: $body-color;
@@ -73,9 +76,12 @@
 }
 .footer-links .link {
   margin-right: 10px;
-  margin-bottom: 60px;
+
   &:nth-child(4) {
     margin-right: 0;
+  }
+  @media screen and(max-width:767px) {
+    margin-bottom: 60px;
   }
 }
 
@@ -93,7 +99,7 @@
 }
 
 .footer-input {
-  width: calc(100% - 30px);
+  width: 358px;
   height: 50px;
   margin-right: 10px;
   margin-bottom: 20px;
@@ -107,6 +113,9 @@
   border-radius: 4px;
   background-color: $footer-background-color;
   color: $second-text-color;
+  @media screen and(max-width:1199px) {
+    width: calc(100% - 30px);
+  }
 }
 .button.primary {
   display: inline-flex;
@@ -116,11 +125,9 @@
 .footer-send {
   margin-left: 10px;
 }
-.footer-news {
-  @media screen and(min-width:1200px) {
-    display: flex;
-  }
-}
+
 .footer-adress {
-  margin-bottom: 60px;
+  @media screen and(max-width:1199px) {
+    margin-bottom: 60px;
+  }
 }
