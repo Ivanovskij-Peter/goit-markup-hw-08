@@ -707,10 +707,8 @@ textarea {
   text-align: center;
 }
 
-@media screen and (min-width: 480px) {
-  .team {
-    margin: -15px;
-  }
+.team {
+  margin: -15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -720,16 +718,6 @@ textarea {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: -15px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .team {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: -15px;
   }
 }
 
@@ -1081,6 +1069,50 @@ a {
   text-decoration: none;
 }
 
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.buttons .item:not(:last-child) {
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .buttons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .buttons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  .buttons .item {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .buttons {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .buttons {
+    margin-bottom: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .buttons .link {
   padding: 6px 22px;
   font-weight: 500;
@@ -1103,18 +1135,51 @@ a {
 }
 
 /* works */
+.works {
+  margin: -15px;
+}
+
+@media screen and (min-width: 768px) {
+  .works {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .example {
   display: block;
-  width: 370px;
   text-align: initial;
   background: #ffffff;
   border: 1px solid #eeeeee;
-  margin: 15px;
+  margin: -15px;
 }
 
 .example:hover {
   -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
           box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (min-width: 768px) {
+  .example {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .example:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .example {
+    width: calc((100% - 6 * 15px) / 3);
+    margin: 15px;
+  }
 }
 
 .work {
