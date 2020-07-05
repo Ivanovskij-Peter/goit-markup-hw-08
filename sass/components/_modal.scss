@@ -27,6 +27,9 @@
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  @media screen and(max-width:1199px) {
+    max-width: 450px;
+  }
 }
 
 .form {
@@ -42,6 +45,12 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: $primary-text-color;
+  @media screen and(max-width:1199px) {
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+  }
 }
 .svg-form {
   position: absolute;
@@ -135,6 +144,10 @@ textarea {
 }
 
 .conditions-label {
+  @media screen and(max-width:1199px) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
@@ -152,6 +165,7 @@ textarea {
     border-radius: 2px;
     border: 2px solid $primary-text-color;
     background-origin: border-box;
+    fill: $second-text-color;
     transition: $transition;
   }
   &:checked + .checkbox-svg {
