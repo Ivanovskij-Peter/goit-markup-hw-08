@@ -8,7 +8,20 @@
   background-color: rgba(0, 0, 0, 0.2);
   transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: scale(1);
-  overflow-y: scroll;
+  @media screen and(max-width:767px) {
+    overflow-y: scroll;
+    padding-top: 93px;
+    padding-bottom: 94px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  @media screen and(min-width:768px) and(max-width:1199px) {
+    overflow-y: scroll;
+    padding-top: 208px;
+    padding-bottom: 209px;
+    padding-left: 157px;
+    padding-right: 157px;
+  }
 
   &.is-hidden {
     opacity: 0;
@@ -18,12 +31,11 @@
 }
 
 .modal {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 528px;
-  width: 100%;
+
   background: $body-color;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -31,15 +43,21 @@
   @media screen and(max-width:1199px) {
     max-width: 450px;
   }
+  @media screen and(min-width:1200px) {
+    max-width: 528px;
+  }
 }
 
 .form {
-  padding: 40px;
+  padding-top: 30px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  padding-right: 40px;
 }
 .form-title {
-  height: 23px;
   padding-top: 40px;
   margin-top: 0px;
+  margin-bottom: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.5;
@@ -47,10 +65,8 @@
   letter-spacing: 0.03em;
   color: $primary-text-color;
   @media screen and(max-width:1199px) {
-    padding-top: 40px;
     padding-left: 40px;
     padding-right: 40px;
-    padding-bottom: 30px;
   }
 }
 .svg-form {
@@ -125,6 +141,7 @@
   background: $body-color;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 .close-button:hover .svg-close,
 .close-button:focus .svg-close {
   border-color: $accent-color;
@@ -145,15 +162,15 @@ textarea {
 }
 
 .conditions-label {
-  @media screen and(max-width:1199px) {
-    font-size: 12px;
-    line-height: 1.16;
-  }
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
 
   color: $title-text-color;
+  @media screen and(max-width:1199px) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
 }
 .checkbox {
   -webkit-appearance: none;

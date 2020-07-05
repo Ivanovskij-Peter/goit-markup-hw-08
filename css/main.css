@@ -464,7 +464,26 @@ ul {
   transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transform: scale(1);
           transform: scale(1);
-  overflow-y: scroll;
+}
+
+@media screen and (max-width: 767px) {
+  .backdrop {
+    overflow-y: scroll;
+    padding-top: 93px;
+    padding-bottom: 94px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .backdrop {
+    overflow-y: scroll;
+    padding-top: 208px;
+    padding-bottom: 209px;
+    padding-left: 157px;
+    padding-right: 157px;
+  }
 }
 
 .backdrop.is-hidden {
@@ -475,13 +494,11 @@ ul {
 }
 
 .modal {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  max-width: 528px;
-  width: 100%;
   background: #ffffff;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -494,14 +511,23 @@ ul {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+  }
+}
+
 .form {
-  padding: 40px;
+  padding-top: 30px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  padding-right: 40px;
 }
 
 .form-title {
-  height: 23px;
   padding-top: 40px;
   margin-top: 0px;
+  margin-bottom: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 1.5;
@@ -512,10 +538,8 @@ ul {
 
 @media screen and (max-width: 1199px) {
   .form-title {
-    padding-top: 40px;
     padding-left: 40px;
     padding-right: 40px;
-    padding-bottom: 30px;
   }
 }
 
