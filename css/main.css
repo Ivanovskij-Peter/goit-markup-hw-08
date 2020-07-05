@@ -480,7 +480,6 @@ ul {
   .backdrop {
     overflow-y: scroll;
     padding-top: 208px;
-    padding-bottom: 209px;
     padding-left: 157px;
     padding-right: 157px;
   }
@@ -841,6 +840,7 @@ textarea {
 }
 
 .team .item {
+  padding: 15px;
   border-radius: 4px 4px 0px 0px;
 }
 
