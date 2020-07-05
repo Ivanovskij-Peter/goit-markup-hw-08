@@ -20,12 +20,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media screen and (min-width: 480px) {
-    width: 480px;
-  }
-  @media screen and (min-width: 768px) {
-    width: 768px;
-  }
   @media screen and(min-width:1200px) {
     width: 1200px;
   }
@@ -56,15 +50,14 @@
   &:focus {
     color: $accent-color;
   }
-  @media screen and(min-width:768px) {
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
 }
 .site-nav .link.current {
   color: $accent-color;
   position: relative;
-  padding-bottom: 12px;
+  @media screen and(max-width:767px) {
+    padding-bottom: 12px;
+  }
+
   @media screen and(min-width:768px) {
     padding-top: 32px;
     padding-bottom: 32px;
@@ -90,6 +83,9 @@
 }
 .contacts-nav {
   @media screen and(min-width:768px) and(max-width:1199px) {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
     padding-top: 21px;
     padding-bottom: 21px;
     & :not(:last-child) {
@@ -167,6 +163,7 @@
     display: block;
     padding-top: 60px;
     padding-bottom: 60px;
+    z-index: 999;
   }
   @media screen and (max-width: 767px) {
     display: none;

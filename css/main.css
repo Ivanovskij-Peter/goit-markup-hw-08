@@ -149,18 +149,6 @@ ul {
           justify-content: space-between;
 }
 
-@media screen and (min-width: 480px) {
-  .main-nav {
-    width: 480px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .main-nav {
-    width: 768px;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .main-nav {
     width: 1200px;
@@ -200,17 +188,15 @@ ul {
   color: #2196f3;
 }
 
-@media screen and (min-width: 768px) {
-  .site-nav .link {
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
-}
-
 .site-nav .link.current {
   color: #2196f3;
   position: relative;
-  padding-bottom: 12px;
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav .link.current {
+    padding-bottom: 12px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -245,6 +231,16 @@ ul {
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .contacts-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     padding-top: 21px;
     padding-bottom: 21px;
   }
@@ -348,6 +344,7 @@ ul {
   display: block;
   padding-top: 60px;
   padding-bottom: 60px;
+  z-index: 999;
 }
 
 @media screen and (max-width: 767px) {
@@ -394,7 +391,6 @@ ul {
 }
 
 .hero {
-  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -468,6 +464,7 @@ ul {
   transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transform: scale(1);
           transform: scale(1);
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -945,6 +942,10 @@ textarea {
   }
 }
 
+.clients .item {
+  margin-bottom: 15px;
+}
+
 @media screen and (min-width: 480px) {
   .clients .item {
     width: calc((100% - 4 * 15px) / 2);
@@ -1125,7 +1126,6 @@ textarea {
 .footer-input {
   width: 358px;
   height: 50px;
-  margin-right: 10px;
   margin-bottom: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -1143,6 +1143,12 @@ textarea {
 @media screen and (max-width: 1199px) {
   .footer-input {
     width: calc(100% - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-input {
+    margin-right: 10px;
   }
 }
 
